@@ -41,6 +41,7 @@ header {
     bottom: 0;
     right: 0;
 }
+
 .busca,
 .menu-departamentos {
     background-color: #DCDCDC;
@@ -164,4 +165,32 @@ footer .container {
     background-image: url(../img/facebook.png);
     /* retirando o texto da frente */
     text-indent: -9999px;
+}
+.menu-opcoes a:hover {
+    color: #007DC6;
+}
+.menu-opcoes a:active {
+    color: #867DC6;
+}
+.menu-departamentos li ul {
+    display: none;
+}
+.menu-departamentos li:hover ul {
+    display: block;
+}
+.menu-departamentos ul ul lu {
+    background-color: #DCDCDC;
+}
+.menu-departamentos li li a:before {
+    content: '- ';
+    content: '\2756';
+    padding-right: 3px;
+}
+.painel h2:before {
+content: \2756;
+padding-right: 5px;
+opacity: 0.4;
+}
+.menu-departamentos a:hover {
+    color: #007DC6;
 }
