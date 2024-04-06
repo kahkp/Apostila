@@ -194,3 +194,47 @@ opacity: 0.4;
 .menu-departamentos a:hover {
     color: #007DC6;
 }
+/*essa tag aqui debaixo @media serve para o css da parte mobile*/
+@media (max-width: 939px) {
+    /* adicionar aqui os novos estilos para mobile */
+    .container {
+        width: 96%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header h1 img {
+        max-width: 50%;
+    }
+    .sacola {
+        display: none;
+    }
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+    .menu-opcoes ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+    .busca,
+    .menu-departamentos,
+    .banner-destaque img {
+        margin-right: 0;
+        width: 100%;
+    }
+    .painel {
+        width: auto;
+    }
+    .painel li {
+        width: 30%;
+    }
+    .painel img {
+        width: 100%;
+    }
+}
+@media (min-width: 480px){
+    header h1 {
+        margin:  5px 0;
+    }
+}
