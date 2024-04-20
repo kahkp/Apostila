@@ -89,8 +89,15 @@ font-size: 15px;
     margin-left: 20px;
 }
 .container {
+    /*margin: 0 auto;
+    width: 940px; */
+    max-width: 1200px; /* Definindo uma largura máxima */
     margin: 0 auto;
-    width: 940px;
+    padding: 0 20px; /* Adicionando um espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Distribui os itens igualmente */
+    align-items: center;
+    
 }
 
 header {
@@ -149,47 +156,27 @@ footer .container {
 :not(p) + p::first-line {
     font-variant: small-caps;
 }
-@media (max-width: 640px) {
+/* Estilos padrão */
+.container {
+    width: 80%; /* Porcentagem da largura do viewport */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
+  
+  /* Estilos para telas menores que 768px */
+  @media screen and (max-width: 768px) {
     .container {
-        width: 96%;
+      width: 90%; /* Reduz a largura para telas menores */
     }
-    header {
-        text-align: center;
+  }
+  
+  /* Estilos para telas menores que 576px */
+  @media screen and (max-width: 576px) {
+    .container {
+      width: 95%; /* Reduz ainda mais a largura para telas muito pequenas */
     }
-    header img {
-        max-width: 50%;
-    }
-    .sacola {
-        display: none;
-    }
-    .menu-opcoes {
-        display: flex;
-        position: static;
-        text-align: center;
-    }
-    .menu-opcoes ul li {
-        display: inline-block;
-        margin: 5px;
-    }
-}
-@media (min-width: 480px){
-    header img{
-        margin:  5px 0;
-    }
-}
-/* ADAPTAÇÕES PARA MOBILE (exercicios do capitulo 6)*/
-@media(min-width: 720px) {
-    header img{
-        text-align: left;
-    }
-
-.menu-opcoes{
-    position: absolute;
-}
-.sacola{
-    display: block;
-}
-.painel li {
-    width: 15%;
-}
-}
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+ 
