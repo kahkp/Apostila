@@ -89,6 +89,12 @@ figcaption {
     position: absolute;
     top: 0;
     right: 0;
+    display: grid;
+    margin: auto;
+    height: 5vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
 }
 
 .menu-opcoes ul {
@@ -100,7 +106,10 @@ figcaption {
 } 
 
 .menu-opcoes ul li {
-    display: inline;
+    display: inline-flex;
+    float: inline-end;
+    position: relative;
+   text-align:right;
     margin-left: 10px; /* Alterado para um valor menor */
 }
 
@@ -114,6 +123,7 @@ figcaption {
 }
 
 header {
+    
     position: relative;
 }
 
@@ -121,6 +131,7 @@ header {
     position: absolute;
     bottom: 0;
     right: 0;
+    
 }
 
 footer {
