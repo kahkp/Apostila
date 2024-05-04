@@ -93,3 +93,41 @@ label[for=azul]::after{
         float: left;
     }
 }
+@media (min-width: 630px) {
+    .produto{
+    /* a foto vau se posicionar absolutamente com relação a esse elemento, 
+    por isso preciso estar posicionando */
+    position: relative;
+    /* deixar 40% de espaço em branco na esquerda para foto ocupar */
+    padding-left: 40%;
+    font-size: 1.2em;
+}
+
+.cores{
+    /* estava relative antes; reinicio para static para evitar que 
+    a foto se posicione com a relação a o mim*/
+    position: static;
+    /* zerando o padding-top que tinha antes e não preciso mais */
+    padding: 0;
+}
+.cores legend {
+    /* estavca absolute antes, para ter o mesmo comportamento no Chrome e no Fireforx; 
+    agora podemos voltar ao fluxo da página */
+    position: static;
+}
+.cores label img {
+    /* imagem se posiciona absolutamente à esquerda com a relação ao .produto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width:  35%;
+    max-height: 100%;
+}
+.cores label::after {
+    /* as bolinhas coloridas tinham posição absoluta e não precisamos mais,
+    basta flutuar uma do lado da outra */
+    position: static;
+    float: left;
+    margin-right: 10px;
+}
+}
