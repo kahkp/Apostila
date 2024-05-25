@@ -1,53 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Mirror</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!--bootstrap para icones(nao deu certo baixar...)
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.css" />
+    -->
+    <!--pra adicionar pré estilos-->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout Mirror</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <!--pra adicionar pré estilos-->
-</head>
-
-<body>
-  <div class="jumbotron jumbotron-fluid">
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <!-- h1 w p que já tinhamos, somente adicionar as respectivas classes-->
+        <h1 class="display-4">Ótima escolha!</h1>
+        <p class="lead">
+          Obrigado por comprar na Mirror Fashion! Preencha seus dados para
+          efetivas a compra.
+        </p>
+      </div>
+      <!--fim .container dentro do jumbotron -->
+    </div>
+    <!-- fim .jumbotron-->
     <div class="container">
-      <!-- h1 w p que já tinhamos, somente adicionar as respectivas classes-->
-      <h1 class="display-4">Ótima escolha!</h1>
-      <p class="lead">
-        Obrigado por comprar na Mirror Fashion!
-        Preencha seus dados para efetivas a compra.
-      </p>
-    </div> <!--fim .container dentro do jumbotron -->
-  </div><!-- fim .jumbotron-->
-  <div class="container">
-    <div class="card mb-3">
-      <div class="card-header">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h2>Sua compra</h2>
+        </div>
+        <!--fim .card-header-->
 
+        <div class="card-body">
+          <!--... aqui vai o <d1> que ja temos-->
+          <img
+            src="img/produtos/foto1-verde.png"
+            alt="Fuzzy Cardigan"
+            class="img-thumbnail. mb-3"
+          />
+          <dl>
+            <dt>Produto</dt>
+            <dd>Fuzzy Cardigan</dd>
 
-        <h2>Sua compra</h2>
-      </div><!--fim .card-header-->
+            <dt>Cor</dt>
+            <dd>Verde</dd>
 
-      <div class="card-body">
-        <!--... aqui vai o <d1> que ja temos-->
-          <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan" class="img-thumbnail. mb-3">
-        <dl>
-          <dt>Produto</dt>
-          <dd>Fuzzy Cardigan</dd>
+            <dt>Tamanho</dt>
+            <dd>40</dd>
 
-          <dt>Cor</dt>
-          <dd>Verde</dd>
+            <dt>Preço</dt>
+            <dd>R$ 129,90</dd>
+          </dl>
+        </div>
+        <!--fim card-body-->
+      </div>
+      <!--fim .card mb-3-->
+      <!--formulario de informação sobre pagamento-->
+      <form>
+        <!--Formulário Dados do cliente nome, email e cpf -->
+        <fieldset>
+          <legend>
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input type="text" class="form-control" id="nome" name="Nome" />
+            </div>
 
-          <dt>Tamanho</dt>
-          <dd>40</dd>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="Email"
+              />
+            </div>
 
-          <dt>Preço</dt>
-          <dd>R$ 129,90</dd>
-        </dl>
-      </div><!--fim card-body-->
-    </div><!--fim .card-->
-  </div><!--fim .container-->
-</body>
+            <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="CPF" />
+            </div>
 
+            <div class="form-group custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="newsletter"
+                value="sim"
+                checked
+              />
+              <label class="custom-control-label">
+                Quero receber Newsletter da Mirror Fashion
+              </label>
+            </div>
+          </legend>
+        </fieldset>
+        <!--Formulário Dados do cliente nome, email e cpf FIM-->
+        <!--Formulário dos Dados do cartão (PAGINA 177 DA APOSTILA)-->
+        <fieldset>
+          <legend>Cartão de crédito</legend>
+
+          <div class="form-group">
+            <label for="numero-cartao">Número - CVV</label>
+            <input type="text" class="form-control" id="numero-cartao" name="Numero-cartão">
+          </div>
+
+          <div class="form-group">
+            <label for="bandeira-cartao">Bandeira</label>
+            <select>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+
+          <div>
+            <label></label>
+            <input>
+          </div>
+        </fieldset>
+        <!--Formulário dos Dados do cartão FIM-->
+      </form>
+      <!--Fim do formulário-->
+    </div>
+    <!--fim .container-->
+  </body>
 </html>
