@@ -18,6 +18,24 @@
   </head>
 
   <body>
+    <!--Navbar e Javascript-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+      <ul class="navbar-nav">
+        <li class="navbar-item active">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" href="#">Ajuda</a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" href="#">Perguntas frequentes</a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" href="#">Entre em contato</a>
+        </li>
+      </ul>
+    </nav>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <!-- h1 w p que já tinhamos, somente adicionar as respectivas classes-->
@@ -31,130 +49,166 @@
     </div>
     <!-- fim .jumbotron-->
     <div class="container">
-      <div class="card mb-3">
-        <div class="card-header">
-          <h2>Sua compra</h2>
+      <div class="row">
+        <div class="card md-4 col-xl-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <h2>Sua compra</h2>
+            </div>
+
+            <!--fim .card-header-->
+
+            <div class="card-body">
+              <!--... aqui vai o <d1> que ja temos-->
+              <img
+                src="img/produtos/foto1-verde.png"
+                alt="Fuzzy Cardigan"
+                class="img-thumbnail. mb-3 d-none d-sm-block"
+              />
+              <dl>
+                <dt>Produto</dt>
+                <dd>Fuzzy Cardigan</dd>
+
+                <dt>Cor</dt>
+                <dd>Verde</dd>
+
+                <dt>Tamanho</dt>
+                <dd>40</dd>
+
+                <dt>Preço</dt>
+                <dd>R$ 129,90</dd>
+              </dl>
+            </div>
+            <!--fim card-body-->
+          </div>
+          <!--fim .card mb-3-->
         </div>
-        <!--fim .card-header-->
+        <!--formulario de informação sobre pagamento-->
+        <form class="col-md-8 col-xl-9">
+          <!--Formulário Dados do cliente nome, email e cpf -->
+          <div class="row">
+            <fieldset class="col-lg-6">
+              <legend>
+                <div class="form-group">
+                  <label for="nome">Nome Completo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    name="Nome"
+                    autofocus
+                    required
+                  />
+                </div>
 
-        <div class="card-body">
-          <!--... aqui vai o <d1> que ja temos-->
-          <img
-            src="img/produtos/foto1-verde.png"
-            alt="Fuzzy Cardigan"
-            class="img-thumbnail. mb-3"
-          />
-          <dl>
-            <dt>Produto</dt>
-            <dd>Fuzzy Cardigan</dd>
+                <div class="form-group">
+                  <label for="email">Email</label>
 
-            <dt>Cor</dt>
-            <dd>Verde</dd>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
 
-            <dt>Tamanho</dt>
-            <dd>40</dd>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="Email"
+                      placeholder="email@exemplo.com "
+                    />
+                  </div>
+                </div>
 
-            <dt>Preço</dt>
-            <dd>R$ 129,90</dd>
-          </dl>
-        </div>
-        <!--fim card-body-->
+                <div class="form-group">
+                  <label for="cpf">CPF</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cpf"
+                    name="CPF"
+                    placeholder="000.000.000-00"
+                    required
+                  />
+                </div>
+                <!--Tag required foi adicionada no nome e no cpf-->
+                <div class="form-group custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="newsletter"
+                    value="sim"
+                    checked
+                  />
+                  <label class="custom-control-label">
+                    Quero receber Newsletter da Mirror Fashion
+                  </label>
+                </div>
+              </legend>
+            </fieldset>
+            <!--Formulário Dados do cliente nome, email e cpf FIM-->
+            <!--Formulário dos Dados do cartão (PAGINA 177 DA APOSTILA)-->
+            <fieldset class="col-lg-6">
+              <legend>Cartão de crédito</legend>
+
+              <div class="form-group">
+                <label for="numero-cartao">Número - CVV</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="numero-cartao"
+                  name="Numero-cartão"
+                />
+              </div>
+
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="bandeira-cartao"
+                      >Bandeira</label
+                    >
+                  </div>
+                  <select class="custom-select" id="bandeira-cartao">
+                    <option disabled>Selecione uma opção...</option>
+                    <option value="master">MasterCard</option>
+                    <option value="visa">VISA</option>
+                    <option value="amex">American Express</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="validade-cartao">Validade</label>
+                <input
+                  type="month"
+                  class="form-control"
+                  id="validade-cartao"
+                  name="validade-cartao"
+                />
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <span class="oi oi-thumb-up"></span>
+            Confirmar o pedido
+          </button>
+          <!--Formulário dos Dados do cartão FIM-->
+        </form>
+        <!--Fim do formulário-->
       </div>
-      <!--fim .card mb-3-->
-      <!--formulario de informação sobre pagamento-->
-      <form>
-        <!--Formulário Dados do cliente nome, email e cpf -->
-        <fieldset>
-          <legend>
-            <div class="form-group">
-              <label for="nome">Nome Completo</label>
-              <input 
-              type="text" 
-              class="form-control" 
-              id="nome" 
-              name="Nome"
-              autofocus />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="Email"
-                placeholder="email@exemplo.com "
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="cpf">CPF</label>
-              <input
-                type="text"
-                class="form-control"
-                id="cpf"
-                name="CPF"
-                placeholder="000.000.000-00"
-              />
-            </div>
-
-            <div class="form-group custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="newsletter"
-                value="sim"
-                checked
-              />
-              <label class="custom-control-label">
-                Quero receber Newsletter da Mirror Fashion
-              </label>
-            </div>
-          </legend>
-        </fieldset>
-        <!--Formulário Dados do cliente nome, email e cpf FIM-->
-        <!--Formulário dos Dados do cartão (PAGINA 177 DA APOSTILA)-->
-        <fieldset>
-          <legend>Cartão de crédito</legend>
-
-          <div class="form-group">
-            <label for="numero-cartao">Número - CVV</label>
-            <input
-              type="text"
-              class="form-control"
-              id="numero-cartao"
-              name="Numero-cartão"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="bandeira-cartao">Bandeira</label>
-            <select class="custom-select" id="bandeira-cartao">
-              <option disabled>Selecione uma opção...</option>
-              <option value="master">MasterCard</option>
-              <option value="visa">VISA</option>
-              <option value="amex">American Express</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="validade-cartao">Validade</label>
-            <input
-              type="month"
-              class="form-control"
-              id="validade-cartao"
-              name="validade-cartao"
-            />
-          </div>
-        </fieldset>
-        <button type="submit" class="btn btn-primary">
-          <span class="oi oi-thumb-up"></span>
-          Confirmar o pedido
-        </button>
-        <!--Formulário dos Dados do cartão FIM-->
-      </form>
-      <!--Fim do formulário-->
+      <!--fim .row-->
     </div>
     <!--fim .container-->
   </body>
 </html>
+<!--  Grids Responsivos:(Tela é dividida em colunas)[Bootstrap tem essa familia pronta]
+  col-   : Extra small <  576px
+  col-sm-: Small       >= 576px
+  col-md-: Medium      >= 768px
+  col-lg-: Large       >= 992px
+  col-xl-: Extra Large >= 1200px 
+
+  Podem ser aplicado mais de um em um elemento.
+  Mais informações sobre Grid: https://getbootstrap.com/docs/4.1/layout/grid/
+                               https://getbootstrap.com/docs/4.1/extend/approach/#responsive
+                               https://getbootstrap.com/docs/4.1/getting-started/javascript/
+-->
