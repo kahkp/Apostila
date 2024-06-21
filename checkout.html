@@ -20,7 +20,12 @@
   <body>
     <!--Navbar e Javascript-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!--botaozinho de menu em cima que vai funcionar com JS-->
+      <button class="navbar-toggler-icon" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+      <div class="collapse navbar collapse">
       <ul class="navbar-nav">
         <li class="navbar-item active">
           <a class="nav-link" href="sobre.html">Sobre</a>
@@ -35,6 +40,7 @@
           <a class="nav-link" href="#">Entre em contato</a>
         </li>
       </ul>
+    </div>
     </nav>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -198,6 +204,10 @@
       <!--fim .row-->
     </div>
     <!--fim .container-->
+
+    <!--JS para funcionalidade do botão de menuzinho lá em cima no navbar-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
   </body>
 </html>
 <!--  Grids Responsivos:(Tela é dividida em colunas)[Bootstrap tem essa familia pronta]
