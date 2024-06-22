@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <!--<link rel="stylesheet " href="css/estilos.css"/> importando o css, caso de conflito tirar-->
     <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
     <header class="container">
@@ -53,6 +54,7 @@
         <fieldset class="tamanhos"><!--botãozinho de tamanho da blusa(barra)-->
           <legend>Escolha de tamanho:</legend>
           <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+          <output for="tamanho" name="valortamanho">42</output>
         </fieldset>
         <button class="comprar">Comprar</button>
       </form>
@@ -105,5 +107,6 @@
       </div>
       </div>
     </footer>
+    <script type="text/javascript" src="js/produto.js">
   </body>
 </html>
