@@ -106,12 +106,36 @@
                 <dd>40</dd>
 
                 <dt>Preço</dt>
-                <dd>R$ 129,90</dd>
+                <dd id="preco">R$ 129,90</dd>
               </dl>
             </div>
             <!--fim card-body-->
           </div>
           <!--fim .card mb-3-->
+
+          <!-- Código novo! -->
+          <!--BOTOES PRA CALCULAR VALOR DA COMPRA-->
+          <div class="card mb-3">
+            <div class="card-body">
+              <label for="qtd">Quantidade:</label>
+              <input
+                type="number"
+                id="qtd"
+                min="1"
+                max="99"
+                value="1"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="total">Total:</label>
+              <output for="qtd preco" id="total" class="form-control">
+                R$ 129,90
+              </output>
+            </div>
+          </div>
+          <!--BOTOES PRA CALCULAR VALOR DA COMPRA    FIIIM -->
         </div>
         <!--formulario de informação sobre pagamento-->
         <form class="col-md-8 col-xl-9">
@@ -240,6 +264,8 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <!--BOTÃO DE CALCULAR A COMPRA-->
+    <script type="text/javascript" src="js/total.js"></script>
   </body>
 </html>
 <!--  Grids Responsivos:(Tela é dividida em colunas)[Bootstrap tem essa familia pronta]
