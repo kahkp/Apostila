@@ -68,7 +68,7 @@
     -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <!-- h1 w p que já tinhamos, somente adicionar as respectivas classes-->
+        <!-- h1 e p que já tinhamos, somente adicionar as respectivas classes-->
         <h1 class="display-4">Ótima escolha!</h1>
         <p class="lead">
           Obrigado por comprar na Mirror Fashion! Preencha seus dados para
@@ -115,8 +115,10 @@
 
           <!-- Código novo! -->
           <!--BOTOES PRA CALCULAR VALOR DA COMPRA-->
+
           <div class="card mb-3">
             <div class="card-body">
+              <div class="form-group">
               <label for="qtd">Quantidade:</label>
               <input
                 type="number"
@@ -127,16 +129,17 @@
                 class="form-control"
               />
             </div>
-
-            <div class="form-group">
-              <label for="total">Total:</label>
-              <output for="qtd preco" id="total" class="form-control">
-                R$ 129,90
-              </output>
+              <div class="form-group">
+                <label for="total">Total:</label>
+                <output for="qtd preco" id="total" class="form-control">
+                  R$ 129,90
+                </output>
+              </div>
             </div>
           </div>
+          
           <!--BOTOES PRA CALCULAR VALOR DA COMPRA    FIIIM -->
-        </div>
+        </div><!-- fim da tag card md-4 col-xl-3-->
         <!--formulario de informação sobre pagamento-->
         <form class="col-md-8 col-xl-9">
           <!--Formulário Dados do cliente nome, email e cpf -->
