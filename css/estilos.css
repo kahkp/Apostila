@@ -286,6 +286,12 @@ opacity: 0.4;
     width: 69%;
 }
 }
+.painel li:nth-child(n+7){
+    display: none;
+}
+.painel-aberto li:nth-child(n+7){
+    display: inline-block;
+}
 /* CSS DO BOTAO DE PAUSAR DO BANNER
 .destaque {
     position: relative;
